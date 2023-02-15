@@ -43,12 +43,14 @@ function editTodoModal(id, title) {
             <div>
               <button
                 @click.stop="editTodoModal(todo.id, todo.title)"
+                v-if="!todo.completed"
                 class="ml-auto flex-shrink-0 rounded-full bg-gray-800 p-1 text-orange-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
               >
                 <PencilIcon class="h-6 w-6" aria-hidden="true" />
               </button>
               <button
                 @click.stop="toggleCompleted(todo.id)"
+                v-if="!todo.completed"
                 class="ml-3 flex-shrink-0 rounded-full bg-gray-800 p-1 text-green-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
               >
                 <CheckIcon class="h-6 w-6" aria-hidden="true" />
