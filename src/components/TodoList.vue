@@ -31,7 +31,7 @@ function editTodoModal(id, title) {
 
 <template>
   <div>
-    <div class="mt-6 flow-root mx-auto max-w-3xl max-h-screen overflow-y-auto px-4">
+    <div class="mt-6 flow-root mx-auto max-w-3xl max-h-screen px-4">
       <ul role="list" class="-my-5 divide-y divide-gray-200">
         <li v-for="todo in todoList" :key="todo.id" class="py-4">
           <div class="flex items-center space-x-4">
@@ -120,7 +120,8 @@ function editTodoModal(id, title) {
                   type="button"
                   class="inline-flex w-full justify-center rounded-md border border-transparent bg-orange-600 px-4 py-2 text-base font-medium text-white shadow-sm hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2 sm:w-auto sm:text-sm"
                   @click="
-                    editTodo(idTodo, todo)
+                    editTodo(idTodo, todo);
+                    open = false;
                   "
                 >
                   Edit
