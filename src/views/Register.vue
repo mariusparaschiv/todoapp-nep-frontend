@@ -42,7 +42,7 @@ export default {
 </script>
 
 <template>
-  <div class="relative flex flex-col items-center justify-center min-h-screen">
+  <div class="relative flex flex-col items-center justify-center mt-10">
     <span class="px-2 py-2 mb-4 text-red-600 rounded shadow">
       {{ validation.message }}
     </span>

@@ -29,7 +29,7 @@ export default {
 </script>
 
 <template>
-  <div class="relative flex flex-col items-center justify-center min-h-screen">
+  <div class="relative flex flex-col items-center justify-center mt-10">
     <div class="w-full p-6 shadow bg-gray-50 lg:max-w-md">
       <form class="space-y-4" @submit.prevent="submit">
         <div>
