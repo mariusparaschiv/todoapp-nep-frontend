@@ -16,6 +16,7 @@ export default {
         password: password.value,
       });
       localStorage.setItem('token', response.data.token);
+      axios.defaults.headers["Authorization"] = `Bearer ${localStorage.getItem("token")}`;
       await router.push({ path: '/' });
     };
 
